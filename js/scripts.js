@@ -1,3 +1,4 @@
+// business logic
 let topList;
 let count = (sentence) => {
   let senArr = sentence.trim().split(' ');
@@ -33,11 +34,10 @@ let count = (sentence) => {
   if (pairs.length > 2) {
     topThree = `${pairs[2][0]} - ${pairs[2][1]}x`;
   }
-
-
   return topList = [topOne, topTwo, topThree];
 }
-console.log(topList);
+
+// UI logic
 $(document).ready(function() {
   $('form#userInput').submit(function(e) {
     e.preventDefault();
@@ -46,7 +46,5 @@ $(document).ready(function() {
     $('.topWords').html(`<li>${topList[0]}</li>
     <li>${topList[1]}</li>
     <li>${topList[2]}</li>`);
-    // $('.topWords').append(`<li>${topList[1]}</li>`)
-    // $('.topWords').append(`<li>${topList[2]}</li>`)
   })
 })
