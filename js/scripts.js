@@ -43,8 +43,10 @@ $(document).ready(function() {
     e.preventDefault();
     let sentence = $('input#userSentence').val();
     count(sentence);
-    $('.topWords').append(`<li>${topList[0]}</li>`)
-    $('.topWords').append(`<li>${topList[1]}</li>`)
-    $('.topWords').append(`<li>${topList[2]}</li>`)
+    $('.topWords').html(`<li>${topList[0]}</li>
+    <li>${topList[1]}</li>
+    <li>${topList[2]}</li>`);
+    // $('.topWords').append(`<li>${topList[1]}</li>`)
+    // $('.topWords').append(`<li>${topList[2]}</li>`)
   })
 })
